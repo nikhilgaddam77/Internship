@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website Layout | CodingLab</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+    ::selection{
+        color: #000;
+        background: #fff;
+    }
+    nav{
+        position: fixed;
+        background: #1b1b1b;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 12;
+    }
+    nav .menu{
+        max-width: 1250px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .menu .logo a,logo img{
+        text-decoration: none;
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .menu ul{
+        display: inline-flex;
+    }
+    .menu ul li{
+        list-style: none;
+        margin-left: 7px;
+    }
+    .menu ul li:first-child{
+        margin-left: 0px;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    .menu ul li a:hover{
+        background: #fff;
+        color: rgb(15, 12, 12);
+    }
+    .img{
+        background: url('assets/img/new_images/sliderbanner3.jpg')no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .img::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .center{
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .center .title{
+        color: #fff;
+        font-size: 55px;
+        font-weight: 600;
+    }
+
+    .center .btns{
+      margin-top: 20px;
+    }
+    .center .btns button{
+        height: 55px;
+        width: 170px;
+        border-radius: 5px;
+        border: none;
+        margin: 0 10px;
+        border: 2px solid white;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0 10px;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+    .center .btns button:first-child{
+        color: #fff;
+        background: none;
+    }
+    .btns button:first-child:hover{
+        background: white;
+        color: black;
+    }
+    .center .btns button:last-child{
+        background: white;
+        color: black;
+    }
+    
+  /* card section */
+    .featured-article {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .article-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .article-content {
+        font-size: 1rem;
+    }
+    .article-grid .card {
+        margin-bottom: 20px;
+    }
+
+/* First Section Css */
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .list-unstyled li {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .list-unstyled img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .list-unstyled li:last-child {
+            border-bottom: none;
+        }
+/* First Section Css End */
+
+
+
+/* Quotation  Section Css Start */
+        body {
+            background-color: #f8f9fa;
+        }
+        .quote-container {
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            position: relative;
+            background-color: #fff;
+        }
+        .quote-text {
+            font-style: italic;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .quote-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            font-style: italic;
+            font-weight: normal;
+            color: red;
+        }
+        .quote-author::before {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background-color: red;
+            margin-right: 10px;
+        }
+        .quote-icon {
+            font-size: 80px;
+            color: #eee;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }   
+/* Quotation  Section Css End */
+        .video{
+            position:relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow:hidden;
+        }
+        .video iframe{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border-radius: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .related-articles {
+            margin: 20px;
+        }
+        .related-articles h3 {
+            font-weight: bold;
+        }
+        .related-articles ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .related-articles li {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+        .related-articles a {
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+        }
+        .related-articles a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+/* Image Section  Css start */
+        .image-section {
+            margin-top: 30px;
+        }
+        .custom-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+/* Image Section Css End */
+</style>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <img src="assets/img/pharo1.webp" height="80" width="100">
+            
+          </div>
+          <ul>
+            <li><a href="#">Industries</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Whitepapers</a></li>
+            <li><a href="#">Our Company</a>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+            <div class="img"></div>
+                <div class="center">
+                <div class="title">The Pharoscion-Global</div>
+        
+                <div class="btns">
+                    <button>Learn More</button>
+                </div>
+            </div><br>
+<!-- First section Start -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Left side content -->
+        <div class="col-md-8">
+            <h2 class="pb-3"><mark>The Pharoscion-Global Company</mark></h2>
+            <img src="assets/images/services/marketing-large-1.jpg" class="img-fluid" alt="News Image">
+            <p class="mt-3">Pharoscion Global is a digital transformation agency that helps businesses navigate the complexities of the digital world.</p>
+            <h4><ins>Here are some highlights and keywords about the company:</ins></h4>
+             <p><strong>Focus on Digital Transformation:</strong> Pharoscion specializes in helping businesses adapt and thrive in the digital age through a range of services.</p>
+             <p><strong>Data-Driven Approach:</strong>They utilize data analytics and cutting-edge technologies to develop tailored strategies and solutions.</p>
+             <p><strong>Wide Range of Services:</strong>Their services include cloud computing, AI and automation, custom software development, web development, digital marketing, and more.</p>
+             <p><strong>Global Presence:</strong>Their team comprises professionals from IITs, IIMs, and other experienced scholars.</p>
+             <p><strong>Client Retention:</strong>They boast a high client retention rate, demonstrating their commitment to client satisfaction.</p>
+
+            <!-- keywords sections -->
+            <h4>Keywords</h4>
+             <div class="highlight-list">
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Web Developer</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Focus on Digital Transformation</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Data-Driven Approach</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Wide Range of Services</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Global Presence</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Client Retention</div>
+            </div>
+            <!-- Quotation Section  -->
+             <div class="container mt-4"> 
+                <div class="quote-container">
+                    <div class="quote-icon">&#8220;&#8221;</div>
+                    <p class="quote-text">
+                        Pharoscion Global: Navigating the complexities of digital transformation, empowering your business to thrive in the future..
+                    </p>
+                    <div class="quote-author">Pharoscion-Global</div>
+                </div>
+                <p class="mt-4"><kbd>Pharoscion-Global</kbd> is a company that is dedicated to helping businesses succeed in the digital age. They offer a comprehensive range of services and have a strong track record of success.</p>
+            </div>
+
+            <!-- Image Section -->
+            <div class="row image-section">
+                <div class="col-md-6">
+                    <img src="assets/images/services/marketing-large-2.jpg" alt="Tablet with UI Design" class="custom-image">
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/services/marketing-large-2.jpg" alt="Desk with Notes and Glasses" class="custom-image">
+                </div>
+            </div>
+            <h4 class="mt-4"><ins>Focusing on Innovation & Technology:</ins></h4>
+            <p><strong>Pioneering Digital Solutions:</strong>  Emphasizes Pharoscion's forward-thinking approach.</p>
+            <p><strong>Cutting-Edge Technologies:</strong>  Highlights their use of the latest advancements.</p>
+            <p><strong>Transformative Innovation:</strong>  Positions Pharoscion as a driver of change.</p>
+            <p><strong>Future-Forward Strategies:</strong>  Showcases their ability to anticipate and prepare for future trends.</p>
+
+
+            <!-- Hightlights sections  -->
+            <div class="highlight-list">
+                <h4>Innovations & Technology:</h4>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Web Developer</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Focus on Digital Transformation</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Data-Driven Approach</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Wide Range of Services</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Global Presence</div>
+                <div class="highlight-item"><span class="highlight-icon">✔️</span> Client Retention</div>
+            </div>
+            <!-- Industries Events Section -->
+             <div class="mt-4">
+            <h4><mark>Industry events and conferences :</mark></h4>
+            <p>Pharoscion Global to connect with peers, potential clients, and industry thought leaders.  These gatherings provide invaluable opportunities to showcase expertise, share insights, and stay abreast of the latest trends shaping the digital landscape. </p></div>
+            
+            <!-- Videos Section -->
+            
+            <div class="video mt-4">
+                <iframe  src="https://www.youtube.com/embed/bw_shxoxQxA?si=i-y4MrLd8jdsmOJR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- About section -->
+            <div class="related-articles">
+                <h3>About Pharoscion :</h3>
+                <ul>
+                    <li>+ <a href="#">Pharoscion Global Expands Its Digital Services</a></li>
+                    <li>+ <a href="#">How Pharoscion Global is Revolutionizing AI & Data Science</a></li>
+                    <li>+ <a href="#" class="highlight">Pharoscion Global Achieves Major Milestone in Cloud Computing</a></li>
+                    <li>+ <a href="#">Why Pharoscion Global is the Best Place to Start Your Tech Career</a></li>
+                    <li>+ <a href="#">The Future of Digital Marketing with Pharoscion Global</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right side content -->
+        <div class="col-md-4 pt-5">
+            <div class="card mb-4">
+                <img src="assets/images/services/marketing-large-1.jpg" class="card-img-top" alt="Side News">
+                <div class="card-body">
+                    <h5 class="card-title">The Pharoscion-Global Company Latest Updates</h5>
+                    <a href="#" class="btn btn-primary">Explore Now →</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Top Week</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <img src="assets/images/services/marketing-large-1.jpg" alt="Top News 1">
+                        <div>
+                            <strong>The Pharoscion-Global Company.</strong>
+                            <p class="text-muted">Feb 9, 2025</p>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <img src="assets/images/services/marketing-large-1.jpg" alt="Top News 2">
+                        <div>
+                            <strong>The Pharoscion-Global Company.</strong>
+                            <p class="text-muted">Feb 9, 2025</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/images/services/marketing-large-1.jpg" alt="Top News 3">
+                        <div>
+                            <strong>The Pharoscion-Global Company.</strong>
+                            <p class="text-muted">Feb 9, 2025</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>

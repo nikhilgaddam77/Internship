@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website Layout | CodingLab</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+    ::selection{
+        color: #000;
+        background: #fff;
+    }
+    nav{
+        position: fixed;
+        background: #1b1b1b;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 12;
+    }
+    nav .menu{
+        max-width: 1250px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .menu .logo a,logo img{
+        text-decoration: none;
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .menu ul{
+        display: inline-flex;
+    }
+    .menu ul li{
+        list-style: none;
+        margin-left: 7px;
+    }
+    .menu ul li:first-child{
+        margin-left: 0px;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    .menu ul li a:hover{
+        background: #fff;
+        color: rgb(15, 12, 12);
+    }
+    .img{
+        background: url('assets/img/new_images/sliderbanner3.jpg')no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .img::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .center{
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+.center .title{
+        color: #fff;
+        font-size: 55px;
+        font-weight: 600;
+    }
+/* .center .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+} */
+  .center .btns{
+      margin-top: 20px;
+}
+    .center .btns button{
+        height: 55px;
+        width: 170px;
+        border-radius: 5px;
+        border: none;
+        margin: 0 10px;
+        border: 2px solid white;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0 10px;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+    .center .btns button:first-child{
+        color: #fff;
+        background: none;
+    }
+    .btns button:first-child:hover{
+        background: white;
+        color: black;
+    }
+    .center .btns button:last-child{
+        background: white;
+        color: black;
+    }
+    
+  /* card section */
+  .featured-article {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.article-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.article-content {
+    font-size: 1rem;
+}
+.article-grid .card {
+    margin-bottom: 20px;
+}
+
+/* First Section css start */
+        .news-img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* Right Side News Card */
+        .news-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 280px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .news-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .news-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+        }
+
+        .category-tag {
+            font-size: 12px;
+            background: #7fbf50;
+            color: black;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 5px 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .explore-btn:hover {
+            background: white;
+            color: black;
+        }
+/* First Section css End */
+
+/* Second Section Css Start */
+.content-section {
+            margin-top: 30px;
+        }
+
+        .content-title {
+            font-weight: bold;
+        }
+
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-list li {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .content-list li i {
+            color: red;
+            margin-right: 8px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: black;
+        }
+/* Second Sectin Css End */
+
+/* Third Section Css Start */
+.quote-box {
+            background-color: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            position: relative;
+            font-family: 'Georgia', serif;
+        }
+
+        .quote-box::before {
+            content: "“";
+            font-size: 100px;
+            color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 5px;
+            left: 10%;
+        }
+
+        .quote-box::after {
+            content: "”";
+            font-size: 100px;
+            color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 5px;
+            right: 10%;
+        }
+
+        .quote-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .author {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .author::before {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background-color: red;
+            position: absolute;
+            bottom: 2px;
+            left: -45px;
+        }
+
+        /* Image Styling */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+/* Third section Css End */
+
+/* Fourth Section Css Start */
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .checklist li i {
+            color: red;
+            margin-right: 10px;
+        }
+/* Fourth Section Css End */
+/* Fifth Section Css Start */
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .suggested-articles {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .suggested-articles li {
+            font-size: 18px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .suggested-articles li:hover {
+            color: #007bff;
+        }
+
+        .plus-icon {
+            font-weight: bold;
+            margin-right: 8px;
+            color: black;
+        }
+/* Fifth Section Css End */
+</style>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <img src="assets/img/pharo1.webp" height="80" width="100">
+            
+          </div>
+          <ul>
+            <li><a href="#">Industries</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Whitepapers</a></li>
+            <li><a href="#">Our Company</a>
+            <!-- <ul class="dropdown">
+                <li><a href="#">The Pharoscion Tales</a></li>
+                <li><a href="#">Our Vision & Mission</a></li>
+                <li><a href="#">The Patron Of Pharos</a></li>
+                <li><a href="#">A Day With Paroscion</a></li>
+                <li><a href="#">Our Labour Of Love</a></li>
+            </ul></li>
+                <li><a href="#">Services & Products</a>
+                <ul class="dropdown">
+                    <li><a href="#">innovative services For Modern Bussiness</a></li>
+                    <li><a href="#">Discover A New World Of Possibilities</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Resources</a>
+                <ul class="dropdown">
+                    <li><a href="#">Your Source For Innovative And Engagging Content</a></li>
+                    <li><a href="#">Build Our Career With Our Dynamic Team</a></li>
+                </ul></li>
+                <li><a href="#">What They Said</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Wisdom Box-Interviews of Founders & More</a></li>
+                        <li><a href="#">The Chance to Work With Inspiring Mentors & Colleagues</a></li>
+                    </ul></li> -->
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="img"></div>
+      <div class="center">
+        <div class="title">The Pharoscion-Global</div>
+        
+        <div class="btns">
+          <button>Learn More</button>
+          
+        </div>
+      </div><br>
+
+
+<!-- First Section -->
+<div class="container mt-5">
+    <h2 class="fw-bold">The Pharoscion-Global Company</h2>
+    <div class="d-flex align-items-center text-muted">
+        <!-- <img src="assets/images/services/marketing-large-1.jpg" class="rounded-circle me-2" alt="Author"> -->
+        <span class="me-3">Latest News</span>
+        <span class="me-3 p-2"> Feb 08, 2025</span>
+    </div>
+    <p class="mt-3">Pharoscion Global is a digital transformation agency that offers a wide range of services to help businesses thrive in the online world. Their services include cloud computing, data analytics, custom app development, web development, digital and content marketing, and more.</p>
+
+    <div class="row mt-4">
+        <!-- Left Side -->
+        <div class="col-md-8">
+            <img src="assets/images/services/marketing-large-1.jpg" class="news-img" alt="Main News">
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-4">
+            <div class="news-card">
+                <img src="assets/images/services/marketing-large-1.jpg" alt="News">
+                <div class="news-overlay">
+                    <span class="category-tag">Latest News</span>
+                    <h6>The Pharoscion-Global Company</h6>
+                    <a href="#" class="explore-btn">Explore Now →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- First Section End -->
+
+
+ <!-- Second Section Start -->
+ <div class="container content-section">
+    <h3 class="fw-bold">Here are some of their latest updates:</h3>
+    <p>
+        Pharoscion Global has expanded its service offerings to include AI and automation services, helping businesses leverage the power of these technologies to improve efficiency and productivity.
+    </p>
+    <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+        totam rem aperiam, the eaque ipsa quaet quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+
+    <!-- Contents Section -->
+    <h5 class="fw-bold">Contents</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="content-list">
+                <li><i class="fa-solid fa-circle-check"></i> Expanded service offerings</li>
+                <li><i class="fa-solid fa-circle-check"></i> Focus on client growth</li>
+                <li><i class="fa-solid fa-circle-check"></i> Global partnerships</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="content-list">
+                <li><i class="fa-solid fa-circle-check"></i> Expansion into European markets</li>
+                <li><i class="fa-solid fa-circle-check"></i> Digital Marketing</li>
+                <li><i class="fa-solid fa-circle-check"></i> Web Developer</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Description with Highlighted Text -->
+    <p>
+        The company prioritizes its clients' growth and visibility, delivering high-quality marketing strategies that meet their goals. <span class="highlight">The Pharoscion-Global</span> 
+     
+    </p>
+    <p>
+        The company has set its sights on expanding into the European markets, establishing a base of operations in the United Kingdom.
+    </p>
+</div>
+  <!-- Second Section End -->
+
+
+<!-- Third Section Start -->
+
+ <div class="container mt-5">
+    <!-- Quote Section  -->
+    <div class="quote-box">
+        <p class="quote-text">
+            Pharoscion Global: Illuminating the path to digital transformation..
+        </p>
+        <p class="author">Pharoscion-Global</p>
+    </div>
+
+    <!-- Text Section  -->
+    <div class="mt-4">
+        <p>
+            Pharoscion Global is a digital transformation agency that helps businesses navigate the complexities of the digital world. They offer a wide range of services,
+        </p>
+        <p>
+            Pharoscion Global has a strong track record of success, having worked with clients in a variety of industries. They are committed to providing high-quality services and building long-lasting relationships with their clients. 
+        </p>
+    </div>
+
+    <!-- Image Section  -->
+    <div class="row mt-4">
+        <div class="col-md-6 image-container">
+            <img src="assets/images/services/technology-2.jpg" alt="">
+        </div>
+        <div class="col-md-6 image-container">
+            <img src="assets/images/services/technology-2.jpg" alt="">
+        </div>
+    </div>
+</div> 
+ <!-- Third Section End -->
+  <!-- Fourth Section Start -->
+  <div class="container mt-4">
+    <div class="row">
+        <!-- Left Content -->
+        <div class="col-lg-8">
+            <h2 class="fw-bold mt-4">They offer a wide range of services, including:</h2>
+            <p><strong>Cloud Computing:</strong> Pharoscion Global helps businesses leverage the power of cloud computing platforms like AWS and Azure to store, manage, and process data efficiently.</p>
+            <p><strong>Analytics:</strong> The company provides data analytics services to help businesses gain insights from their data and make informed decisions.</p>
+            <p><strong>Custom Application, ERP, and Software Development:</strong> Pharoscion Global creates custom applications, ERP systems, and software tailored to clients' specific business requirements.</p>
+            <h3 class="fw-bold mt-4">SEO, SMO, SMM, and Marketing on Amazon, eBay, and Flipkart:</h3>
+            <p>The company utilizes SEO/SMO, SMM/SME marketing, and marketplaces like Amazon, eBay, and Flipkart to enhance clients' visibility and sales.</p>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle"></i> Custom Application, ERP, and Software Development</li>
+                <li><i class="bi bi-check-circle"></i> Data Analytics</li>
+                <li><i class="bi bi-check-circle"></i> Digital and Content Marketing</li>
+                <li><i class="bi bi-check-circle"></i> AI and Automation Services</li>
+            </ul>
+        </div>
+        <!-- Right Sidebar: Top Week -->
+        <div class="col-lg-4">
+            <div class="top-week">
+                <h4 class="fw-bold">Top Week</h4>
+                <div class="d-flex align-items-center mb-3">
+                    <img src="https://via.placeholder.com/60" alt="">
+                    <div class="ms-3">
+                        <p class="mb-1 fw-bold">Shaping the Future of Food Any with many.</p>
+                        <small>Feb 8, 2025</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <img src="https://via.placeholder.com/60" alt="">
+                    <div class="ms-3">
+                        <p class="mb-1 fw-bold">World’s largest crocodile in captivity dies</p>
+                        <small>Feb 8, 2025</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <img src="https://via.placeholder.com/60" alt="">
+                    <div class="ms-3">
+                        <p class="mb-1 fw-bold">Andy Warhol artworks stolen in Dutch gallery heist</p>
+                        <small>Feb 8, 2025</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/60" alt="">
+                    <div class="ms-3">
+                        <p class="mb-1 fw-bold">Team With a $10 Million Roster Is Brink.</p>
+                        <small>Feb 8, 2025</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- <div class="container">
+    Section 1: Easy Navigation 
+    <h2 class="fw-bold mt-4">They offer a wide range of services, including:</h2>
+    <p>
+        <strong>Cloud Computing:</strong> Pharoscion Global helps businesses leverage the power of cloud computing platforms like AWS and Azure to store, manage, and process data efficiently.
+    </p>
+    <p>
+        <strong>Analytics:</strong> The company provides data analytics services to help businesses gain insights from their data and make informed decisions.
+    </p>
+    <p>
+        <strong>Custom Application, ERP, and Software Development:</strong> Pharoscion Global creates custom applications, ERP systems, and software tailored to clients' specific business requirements.
+    </p>
+
+     Section 2: Website Visual Composition 
+    <h3 class="fw-bold mt-4">SEO, SMO, SMM, and Marketing on Amazon, eBay, and Flipkart:</h3>
+    <p>
+        The company utilizes SEO/SMO, SMM/SME marketing, and marketplaces like Amazon, eBay, and Flipkart to enhance clients' visibility and sales.   
+
+    </p>
+
+     Checklist 
+    <ul class="checklist">
+        <li><i class="bi bi-check-circle"></i>Custom Application, ERP, and Software Development</li>
+        <li><i class="bi bi-check-circle"></i>Data Analytics</li>
+        <li><i class="bi bi-check-circle"></i>Digital and Content Marketing</li>
+        <li><i class="bi bi-check-circle"></i>AI and Automation Services</li>
+    </ul>
+</div> -->
+   <!-- Fourth Section End -->
+
+<!-- Fifth Section Start -->
+<div class="container">
+    <h5 class="fw-bold mt-4">The Pharoscion-Global</h5>
+    <ul class="suggested-articles">
+        <li href="#"><span class="plus-icon">+</span> Cloud Computing</li>
+        <li href="#"><span class="plus-icon">+</span>Data Analytics</li>
+        <li href="#"><span class="plus-icon">+</span>Custom Application, ERP, and Software Development</li>
+        <li href="#"><span class="plus-icon">+</span>Digital and Content Marketing</li>
+        <li href="#"><span class="plus-icon">+</span>AI and Automation Services</li>
+    </ul>
+</div>
+ <!-- Fifth Section End -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
